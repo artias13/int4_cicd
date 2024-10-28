@@ -13,5 +13,5 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Just a note
 EXPOSE 8225
 
-# Run app.py when the container launches
-CMD ["python3", "app.py"]
+# Run main.py when the container launches
+CMD ["python3", "main.py"]

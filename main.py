@@ -12,12 +12,12 @@ class Server:
         
     def setup_routes(self):
         @self.app.route('/', methods=['GET', 'OPTIONS'])
-        def home(self):
+        def home():
             reply = "Try /healthz bro"
 
         @self.app.route('/healthz', methods=['GET', 'OPTIONS'])
-        def healthz(self):
-            return Response("OK", status=200)
+        def healthz():
+            return Response("200 OK", status=200)
 
     def run(self, debug, port, host):
         print(f'ну давай, нападай: http://{host}:{port}')
