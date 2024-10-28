@@ -13,7 +13,7 @@ class Server:
     def setup_routes(self):
         @self.app.route('/', methods=['GET', 'OPTIONS'])
         def home():
-            reply = "Try /healthz bro"
+            return Response("404 Try /healthz bro", status=404) 
 
         @self.app.route('/healthz', methods=['GET', 'OPTIONS'])
         def healthz():
